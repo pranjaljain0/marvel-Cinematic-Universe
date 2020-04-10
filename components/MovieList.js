@@ -14,7 +14,7 @@ const MovieList = ({movies,navigate}) => {
     return (
         <SafeAreaView style={styles.container}>
         <FlatList
-          data={movies}
+          data={movies.sort((a,b)=>(a.local_id>b.local_id)?1:-1)}
           numColumns={2}
           contentContainerStyle={styles.contentContainerStyleView}
           renderItem={({ item }) =>
@@ -33,7 +33,7 @@ const MovieList = ({movies,navigate}) => {
               <Text style={styles.titleText}>{item.title}</Text>
           </TouchableOpacity>
           }
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.local_id}
         />
       </SafeAreaView>
     )

@@ -41,13 +41,9 @@ const Home = ({ navigation: { navigate } }) => {
         revenue:"",
       };
 
-
-    const [hasError, setErrors] = useState(false);
     const [movie,setMovie]=useState([])
-    var i=0
     useEffect(() =>
-
-        ids.forEach(element=>{
+        ids.forEach((element,index,arr)=>{
             fetch("https://api.themoviedb.org/3/movie/"+element+"?api_key=7793cc77a9bf4a20c93232b767974513&language=en-US")
             .then(res => res.json())
             // .then(setMovie())
@@ -56,6 +52,7 @@ const Home = ({ navigation: { navigate } }) => {
                     return [
                         ...prevMovies,
                         {
+                            local_id:index,
                             id:jsonVal['id'],
                             title:jsonVal['title'],
                             poster_path:jsonVal['poster_path'],
@@ -68,19 +65,12 @@ const Home = ({ navigation: { navigate } }) => {
                     }
                     ]
                 })
-                console.log(index)
             })
-            .then(()=>{
-                i=i+1
-            })
-            .catch(() => this.setState({ hasErrors: true }))
-
         })
     ,[]);
 
     return (
-        
-        <MovieList movies={movie} navigate={navigate} i={i}/>
+        <MovieList movies={movie} navigate={navigate}/>
     )
 }
 
