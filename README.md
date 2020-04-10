@@ -13,4 +13,4 @@ This is a react native application for all the marvel movies
 
 ## Screens
 
-<img src="https://res.cloudinary.com/daytlidrk/image/upload/v1586491969/Screenshot_20200410-091945_lfgsdm.jpg" width="250" style="margin:5px;"><img src="https://res.cloudinary.com/daytlidrk/image/upload/v1586491966/Screenshot_20200410-091954_t2fgbe.jpg" width="250" style="margin:5px;">
+<img src="https://res.cloudinary.com/daytlidrk/image/upload/v1586491969/Screenshot_20200410-091945_lfgsdm.jpg" width="250" style="margin:5px;"><img src="https://res.cloudinary.com/daytlidrk/image/upload/v1586491966/Screenshot_20200410-091954_t2fgbe.jpg" width="250" style="margin:5px;"><img src="https://res.cloudinary.com/daytlidrk/image/upload/v1586492855/splash_poojyd.jpg" width="250" style="margin:5px;">
